@@ -1,0 +1,283 @@
+заходим в GitHub
+create repository  (private, add readme)
+copy https://
+git clone https:// (git bash)
+touch test1.json
+vim test1.json - (wright json)
+git status (test1.json is red)
+
+git add test1.json
+git commit -m "create test1.json"  (фотографируем состояние репозитория)
+git push
+
+settings - developer settings - person access token - create new token - copy - paste into password field when doing git push
+
+ssh-keygen -t rsa -C “githubuser“  (для создания SSH , для того чтобы не создавать токен часто)
+ssh-keygen пароль 123
+идем в папку гле создали документ ssh/id-rsa.pub (папка скрытая) 
+открываем ssh/id-rsa.pub - copyc-github - settings - SSH and CPG keys - New SSH - ctrl V
+
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я 
+pwd
+2) Создать папку 
+mkdir homework
+3) Зайти в папку 
+cd homework
+4) Создать 3 папки 
+mkdir folder_1 folder_2 folder_3 
+5) Зайти в любоую папку 
+cd folder_1
+6) Создать 5 файлов (3 txt, 2 json) 
+touch 1.txt 2.txt 3.txt 1.json 2.json
+7) Создать 3 папки 
+mkdir folder_4 folder_5 folder_6
+8. Вывести список содержимого папки 
+ls -la
+9) + Открыть любой txt файл 
+vim 1.txt
+10) + написать туда что-нибудь, любой текст. 
+i - Hello
+11) + сохранить и выйти. 
+esc :wq
+12) Выйти из папки на уровень выше  
+cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.  
+mv folder_1/*.json folder_2/
+mv folder_1/{1.json 2.json} folder_2/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. 
+cp folder_2/*.json folder_1/
+15) Найти файл по имени 
+find -name 1.txt
+find . -name 1.txt или 
+find . -name "1.txt"  (находит файл в текущем каталоге по имени) либо 
+find . -type f -name 1.txt (находит файл в текущей папке по имени)
+find ./ -type f -name 1.txt
+16) просмотреть содержимое в реальном времени 
+tail -f 1.json (данные в реальном времени, например для просмотра логов)
+
+cat 1.txt (выводит содержимое файла, необходимо находиться в соответствующей папке) либо
+cat folder_1/1.txt
+17) вывести несколько первых строк из текстового файла 
+head 1.json (выводит первые 10 строк)
+head -n2 1.json (выводит первые 2 строки)
+18) вывести несколько последних строк из текстового файла 
+tail 1.json (выводит последние 10 строк)
+tail -n2 1.json (выводит последние 2 строки) 
+tail -f 1.json (данные в реальном времени, например для просмотра логов)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less -10 1.txt (less позволяет просматривать текст по определённому числу строк,в данном случае 10)
+q, Q, :q, :Q, ZZ (выйти из less)
+20) вывести дату и время
+date (по умолчанию применяет маску %a %b %d %X %Z)
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000
+- curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+(Open the terminal. Go to the directory where you want to create your script.
+Create a file with . sh extension.
+Write the script in the file using an editor.
+Make the script executable with command chmod +x <fileName>.
+Run the script using ./<fileName>.)
+
+touch script.sh
+chmod +x ./script.sh (делаем файл исполняемым)
+
+#!/bin/bash
+cd script_test
+mkdir first second third
+cd first
+touch 4.txt 5.txt 6.txt 3.json 4.json
+mkdir 4 5 6
+ls -la
+mv *.json 4/
+
+#!/bin/bash
+cd script_test
+mkdir first second third
+cd first
+touch 4.txt 5.txt 6.txt 3.json 4.json
+mkdir 4 5 6
+ls -la
+mv *.json ../second/
+
+#!/bin/bash
+cd script_test
+mkdir first second third
+cd first
+touch 4.txt 5.txt 6.txt 3.json 4.json
+mkdir 4 5 6
+ls -la
+mv *.json *.txt ../second/
+
+
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+4) Открыть проводник - start .
+5) Найти файл - ls | grep
+6) Очистить консоль - clear
+7) Остановить команду - Ctrl C
+
+Навигация 
+pwd — Показать текущий каталог 
+ls - Показать файлы в данной папке, кроме скрытых 
+ls -f — Показать файлы в данной папке, включая и скрытые 
+cd c:/ — Перейти в конкретный каталог 
+cd - — Вернуться назад 
+cd .. — Выйти на 1 уровень вверх 
+cd ../.. — Выйти на 2 уровня вверх 
+
+Создание каталогов 
+mkdir — Создать папку 
+cd !$ — Перейти в только что созданную папку 
+mkdir -p {app1,app2} — Создать сразу несколько папок 
+mkdir -p app/{css,js} — Создать сразу несколько вложенных папок 
+ 
+Создание файлов 
+touch index.html — Создать файл index.html 
+touch app/{css/main.css,js/main.js,index.html} — Создать сразу несколько файлов, никаких лишних пробелов быть не должно 
+ 
+Удаление файлов 
+touch — позволяет создавать файлы 
+rm test — Удалить пустую папку test 
+rm -r test — Удалить папку test с файлами внутри неё 
+ 
+Перемещение файлов 
+mv app1/*.* app2 — Переместить все файлы из папки app1 в папку app2
+
+(команда grep) изучите как она работает.  
+- grep -i a 1.txt (выводит слова, содержащие букву а, -i - поиск без учета регистра)
+- grep -w hello 1.txt (поиск всего слова) 
+- grep -с hello 1.txt (количество совпадений)
+- grep -r file_1 * (поиск в подкаталогах)
+- grep -n 1.txt (печать номеров строк)
+опции утилиты grep:
+-b - показывать номер блока перед строкой;
+-c - подсчитать количество вхождений шаблона;
+-h - не выводить имя файла в результатах поиска внутри файлов Linux;
+-i - не учитывать регистр;
+- l - отобразить только имена файлов, в которых найден шаблон;
+-n - показывать номер строки в файле;
+-s - не показывать сообщения об ошибках;
+-v - инвертировать поиск, выдавать все строки кроме тех, что содержат шаблон;
+-w - искать шаблон как слово, окружённое пробелами;
+-e - использовать регулярные выражения при поиске;
+-An - показать вхождение и n строк до него;
+-Bn - показать вхождение и n строк после него;
+-Cn - показать n строк до и после вхождения;
+
+switches:
+--man
+-0/--null (when reading from STDIN)
+-f/--force or -i/--interactive (procced or prompt when overwriting)
+-g/--glob (expand "*" ect in filenames, useful in Windows CMD.EXE)
+-k/--backwards/--reverse-order
+-l/--symlinkor -L/--hardlink
+-M/--use=Module
+-m/--just print/--dry run
+
+git pull - загрузка из удаленного репозитория и обновление локального репозитория
+git checkout - переключение между ветками
+git add . - добавление всех файлов
+git reset - отмена добавления файлов под commit
+
+rm test1.txt
+git rm test.txt
+ls -la
+git status
+git commit -m "delete file"
+git push
+
+git branch
+start .
+git checkout -b google_pay - создали новую ветку и перепрыгнули в нее
+git branch  - git выдает список веток и подствечивает ветку, в которой мы находимся
+touch test8.json
+git add . - индексируем изменения
+git commit -m "create test8.json" - создаем комит
+git checkout main
+git merge google_pay - объеденили ветки (необходимо находится в ветке в которую добавляют новую ветку)
+vim test8.json
+git commit -am "add new info" - фотография изменений в уже существующий файл на ветке main
+git checkout google_pay
+vim test8.json - добавили другую информацию в файл на вестке гугл
+git commit -am "add new info_2 - фотография изменений в уже существующий файл на ветке google_pay
+git checkout main
+git merge google_pay - возникнет конфликт несоответствия инфы в двух файлах
+vim test8.json - оставляем необходимую инфу из двух файлов, находящихся на разных ветках
+git commit -am "resolve conflict"
+git push - запушили главную ветку (отправляем изменения на удаленный репозиторий)
+git push -u origin google_pay - добавляем ветку в удаленный репозиторий
+
+
+git checkout google_pay - переходим на ветку в которой пргграммист будет делать изменения
+vim test1.json - вносим изменения в файл
+git commit -am "modify test1.json"
+git push
+pull request - ЗАПРОС НА ОБЪЕДИНЕНИЕ НА внешнеМ репозиториИ = команде merge
+
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman - git branch Postman
+- Jmeter - git branch Jmeter
+- CheckLists - git branch CheckLists
+- Bug Reports - git branch Bug Reports
+- SQL - git branch SQL
+- Charles - git branch Charles
+- Mobile testing - git branch Mobile testing
+
+2. Запушить все ветки на внешний репозиторий 
+- git push -u origin Postman
+- git push -u origin Jmeter
+- git push -u origin CheckLists
+- git push -u origin Bug Reports
+- git push -u origin SQL
+- git push -u origin Charles
+- git push -u origin Mobile testing
+
+- git push --all
+
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+touch bugreport_pattern.txt
+vim bugreport_pattern.txt
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git push
+pull request
+merge branches
+
+5. Вмержить ветку Bag Reports в Main
+pull request
+merge branches
+
+6. Запушить main на внешний репозиторий.
+git push
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout checklists
+touch checklists_pattern.txt 
+
+8. Запушить структуру на внешний репозиторий
+git pull
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+pull request
+merge branches
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git checkout main
+git pull
+
+
+
+
