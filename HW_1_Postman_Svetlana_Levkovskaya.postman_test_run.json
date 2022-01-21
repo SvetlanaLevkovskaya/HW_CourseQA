@@ -1,0 +1,172 @@
+{
+	"id": "190d0245-fa35-4251-9ddc-f823216dd374",
+	"name": "HW_1_Postman_Svetlana_Levkovskaya",
+	"timestamp": "2021-11-10T10:29:19.654Z",
+	"collection_id": "17651512-3c6ff40c-8df9-466b-be72-29c1516d3b79",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a41b72f9-6bb1-4615-bfd9-d9a58a1fc78a",
+			"name": "EP_1",
+			"url": "http://162.55.220.72:5005/get_method?name=Svetlana&age=42",
+			"time": 90,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				90
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f8156639-2c0c-4cc8-b0a1-4bf3101e6847",
+			"name": "EP_2",
+			"url": "http://162.55.220.72:5005/user_info_3",
+			"time": 83,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				83
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6c5eed57-d937-4bc0-94e8-0a98c99b5455",
+			"name": "EP_3",
+			"url": "http://162.55.220.72:5005/object_info_1?name=Svetlana&age=42&weight=59",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				79
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b29e62bd-b1e7-4451-8eef-962dca13abc2",
+			"name": "EP_4",
+			"url": "http://162.55.220.72:5005/object_info_2?name=Svetlana&age=42&salary=5000",
+			"time": 74,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				74
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c6715d21-6a42-4599-92c7-e33bbcf38609",
+			"name": "EP_5",
+			"url": "http://162.55.220.72:5005/object_info_3?name=Svetlana&age=42&salary=5000",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				79
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "75617b10-0fa1-4702-9195-851cb838680a",
+			"name": "EP_6",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Svetlana&age=42&salary=5000",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				79
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "05de0c6f-de38-4344-94f5-9f0b27f31444",
+			"name": "EP_7",
+			"url": "http://162.55.220.72:5005/user_info_2",
+			"time": 92,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				92
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 576,
+	"collection": {
+		"requests": [
+			{
+				"id": "a41b72f9-6bb1-4615-bfd9-d9a58a1fc78a",
+				"method": "GET"
+			},
+			{
+				"id": "f8156639-2c0c-4cc8-b0a1-4bf3101e6847",
+				"method": "POST"
+			},
+			{
+				"id": "6c5eed57-d937-4bc0-94e8-0a98c99b5455",
+				"method": "GET"
+			},
+			{
+				"id": "b29e62bd-b1e7-4451-8eef-962dca13abc2",
+				"method": "GET"
+			},
+			{
+				"id": "c6715d21-6a42-4599-92c7-e33bbcf38609",
+				"method": "GET"
+			},
+			{
+				"id": "75617b10-0fa1-4702-9195-851cb838680a",
+				"method": "GET"
+			},
+			{
+				"id": "05de0c6f-de38-4344-94f5-9f0b27f31444",
+				"method": "POST"
+			}
+		]
+	}
+}
