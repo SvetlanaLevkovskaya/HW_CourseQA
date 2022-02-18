@@ -286,3 +286,8 @@ git log --oneline --decorate --graph --all. - посмотреть коммит�
 
 
 
+
+
+
+
+
